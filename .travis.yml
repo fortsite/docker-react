@@ -8,4 +8,4 @@ before_install:
   - docker build -t fortsite/docker-react -f Dockerfile.dev .
 
 scripts:
-  - docker run fortsite/docker-react npm run test -- --coverage
+  - docker run -e CI=true fortsite/docker-react npm run test
